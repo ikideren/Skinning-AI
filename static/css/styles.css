@@ -1,0 +1,271 @@
+/* ================= GLOBAL ================= */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content {
+    flex: 1;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #eac6a5;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;   /* ALWAYS ON TOP */
+    top: 0;
+    z-index: 99999 !important;
+}
+
+.navbar-logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar-right a {
+    margin-left: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navbar-logo:hover {
+    opacity: 0.7;
+}
+
+/* ================= HOME PAGE ================= */
+
+.home-container {
+    text-align: center;
+    padding: 130px 0 180px 0;
+}
+
+.home-title {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.home-subtitle {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 50px;
+}
+
+.home-big-button {
+    display: inline-flex;
+    align-items: center;
+    background: #d7b08c;
+    padding: 22px 50px;
+    border-radius: 45px;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    gap: 30px;
+    transition: 0.3s;
+}
+
+.home-big-button:hover {
+    background: #c99c7b;
+}
+
+.arrow-circle {
+    background: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+}
+
+
+/* ================= UPLOAD PAGE ================= */
+
+.upload-container {
+    width: 90%;
+    margin: 100px auto 150px auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Upload box abu-abu */
+.upload-box {
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    background: #d9d9d9;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.upload-placeholder {
+    font-size: 22px;
+    color: #333;
+}
+
+/* Input tidak boleh menutupi navbar */
+.file-input {
+    position: absolute;
+    inset: 0; /* hanya di dalam upload-box */
+    opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+/* Start Analyzing button */
+.analyze-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #d7b08c;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 28px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 25px auto 40px auto;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.analyze-button:hover {
+    background: #c99c7b;
+}
+
+
+/* ================= RESULT BOX ================= */
+
+.result-container {
+    width: 100%;
+    max-width: 1200px;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    min-height: 200px;
+}
+
+.placeholder-text {
+    font-size: 16px;
+    color: #444;
+}
+
+.result-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.confidence {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.result-image {
+    width: 250px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.description {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.solution {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ================= ABOUT / CONTACT ================= */
+
+.about-section,
+.contact-section {
+    text-align: center;
+    padding: 80px 50px;
+}
+
+.about-section h1,
+.contact-section h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.about-section p,
+.contact-section p {
+    font-size: 18px;
+    color: #333;
+    max-width: 900px;
+    margin: auto;
+}
+
+.team-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* INI YANG BIKIN BENER2 CENTER */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.team-list p {
+    font-size: 18px;
+    margin: 6px 0;
+    color: #333;
+}
+
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #eac6a5;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col h2,
+.footer-col h3 {
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.footer-col a {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.social-icons i {
+    margin-right: 12px;
+    font-size: 22px;
+    cursor: pointer;
+}

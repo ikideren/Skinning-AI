@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="upload-container">
+
+    <!-- UPLOAD BOX -->
+    <form method="POST" enctype="multipart/form-data">
+
+        <label class="upload-box">
+            <div id="file-name" class="upload-placeholder">Insert photo</div>
+            <input type="file" name="file" class="file-input" id="file-input" accept="image/*">
+        </label>
+
+        <!-- ANALYZE BUTTON CENTER -->
+        <button type="submit" class="analyze-button">
+            Start Analyzing
+            <div class="arrow-circle">→</div>
+        </button>
+
+    </form>
+
+    <!-- RESULT BOX -->
+    <div class="result-container">
+    {% if prediction %}
+        <h3>Result: {{ prediction }}</h3>
+        <p class="confidence">Confidence: {{ confidence }}%</p>
+
+        {% if image_url %}
+        <img src="{{ image_url }}" class="result-image">
+        {% endif %}
+
+        <p class="description">{{ description }}</p>
+
+        <p class="solution"><strong>Solusi:</strong> {{ solution }}</p>
+
+    {% else %}
+        <p class="placeholder">description of disease/answer from AI after analyzing</p>
+    {% endif %}
+    </div>
+
+</div>
+
+
+<!-- JS TO CHANGE FILE NAME -->
+<script>
+    document.getElementById("file-input").addEventListener("change", function() {
+        let fileNameText = document.getElementById("file-name");
+
+        if (this.files.length > 0) {
+            fileNameText.textContent = this.files[0].name;
+        } else {
+            fileNameText.textContent = "Insert photo";
+        }
+    });
+</script>
+
+{% endblock %}

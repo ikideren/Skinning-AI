@@ -1,0 +1,6 @@
+1. Ke app.py
+2. Buka terminal (ctrl + `) 
+3. Nyalakan venv dengan cara ketikkan: venv/Scripts/activate
+4. run appnya: python app.py
+5. Buka link local host yang tampil di terminal
+6. Web sudah berhasil di jalankan, siap untuk digunakan untuk mendeteksi penyakit luar umum.

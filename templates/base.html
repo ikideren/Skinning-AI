@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KulitKuAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="/" class="navbar-logo">SkinningAI</a>
+
+        <div class="navbar-right">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('upload') }}">Upload</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-col">
+            <h2>SkinningAI</h2>
+        </div>
+
+        <div class="footer-col">
+            <h3>Pages</h3>
+            <p><a href="{{ url_for('home') }}">Home</a></p>
+            <p><a href="{{ url_for('upload') }}">Upload</a></p>
+            <p><a href="{{ url_for('about') }}">About Us</a></p>
+            <p><a href="{{ url_for('contact') }}">Contact Us</a></p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>support.info@KulitKuAI.com</p>
+            <p>+62 82146839657</p>
+            <p>Tangerang, Indonesia</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Follow us</h3>
+            <div class="social-icons">
+                <i>📷</i> <i>📘</i> <i>🐦</i>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
